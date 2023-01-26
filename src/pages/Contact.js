@@ -1,20 +1,9 @@
 import styled from "styled-components";
-import { useState} from "react";
 import { pageAnimation } from "../animations";
 import { motion } from "framer-motion";
 
 const Contact=()=>{
-    const[name,setName]=useState('');
-    const[email,setEmail]=useState('');
-    const[message,setMessage]=useState("");
-
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-        console.log(name,email,message)
-        setName("");
-        setEmail("");
-        setMessage("");
-    }
+  
     return(
         <Wrapper variants={pageAnimation} exit='exit' initial='hidden' animate='show'>
         <h2>Contact us</h2>
@@ -70,14 +59,14 @@ const Contact=()=>{
        </svg>
        </div>
        <div className="right">
-       <form id="form" name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
+       <form id="form" name="contact" method="post">
        <input type="hidden" name="form-name" value="contact" />
        <label htmlFor="name">Name & Surname</label>
-       <input type="text" name="name" required value={name} onChange={(e)=>setName(e.target.value)}/>
+       <input type="text" name="name" required/>
        <label htmlFor="email">Email</label>
-       <input type="text" name="email" required value={email} onChange={(e)=>setEmail(e.target.value)}/>
+       <input type="text" name="email" required/>
        <label htmlFor="message">Message</label>
-       <textarea name="message" id="" cols="30" rows="10" required value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+       <textarea name="message" id="" cols="30" rows="10" required></textarea>
        <button type='submit' className="btn">Send</button>
        </form>
        </div>
