@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyle} from "./GlobalStyles";
+import Nav from "./components/Nav";
+import HomePage from "./pages/HomePage";
+import PhotographyPage from "./pages/PhotographyPage";
+import PhotographyDetail from "./components/PhotographyDetail";
+import EditorialPage from "./pages/EditorialPage";
+import ConnectSection from "./pages/ConnectUsSection";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import {Routes,Route,useLocation} from 'react-router-dom';
+import { AnimatePresence } from "framer-motion";
+
 
 function App() {
+  const location=useLocation();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <GlobalStyle/>
+    <AnimatePresence mode='wait'>
+    <Nav/>
+    <Routes location={location} key={location.pathname}>
+    <Route path='/' element={<HomePage/>}></Route>
+    <Route path='/portfolio' element={<PhotographyPage/>}></Route>
+    <Route path="/portfolio/:id" element={<PhotographyDetail/>}></Route>
+    <Route path='/editorial-photography' element={<EditorialPage/>}></Route>
+    <Route path='connect-with-us' element={<ConnectSection/>}></Route>
+    <Route path='contact' element={<Contact/>}></Route>
+    </Routes>
+    </AnimatePresence>
+    <Footer/>
     </div>
   );
 }
