@@ -436,7 +436,7 @@ export const links=[
 export const socialLinks=[
     {
         id:1,
-        url:'https://www.twitter.com',
+        url:'https://github.com/larissioana/photography-edition.git',
         icon:<FiGithub/>
     },
     {
