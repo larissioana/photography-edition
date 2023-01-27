@@ -27,13 +27,12 @@ useEffect(()=>{
             <div className="cards">
                 <div className="card">
                     {services.map((service)=>{
-                        const{id,title,image,desc}=service;
+                        const{id,title,image}=service;
                         return <motion.div variants={photoAnim} className="service" key={id}>
                             <div className="icon">
                             <img src={image} alt={title}/>
                             <h3>{title}</h3>
                             </div>
-                            <p>{desc}</p>
                         </motion.div>
                     })}
                 </div>
@@ -55,9 +54,8 @@ const Wrapper=styled(motion.div)`
         font-size:clamp(1.7rem,3vw,3rem);
         text-align: center;
         line-height: 4rem;
-       
-        
     }
+
     .container{
         display: flex;
         justify-content: center;
@@ -72,9 +70,9 @@ const Wrapper=styled(motion.div)`
         align-items: center;
         flex-wrap: wrap;
         p{
-    margin-bottom:1.5rem;
-    margin-top:1rem;
-    font-size:clamp(.9rem,2vw,1rem);
+        margin-bottom:1.5rem;
+        margin-top:1rem;
+        font-size:clamp(.9rem,2vw,1rem);
   }
         
     }
@@ -87,35 +85,33 @@ const Wrapper=styled(motion.div)`
         display: grid;
         place-items: center;
         grid-template-columns: 1fr 1fr;
-        
-     
     }
     .icon{
-  display:flex;
-  align-items:center;
+        display:flex;
+        align-items:center;
  
-  h3{
-    margin-left:1rem;
-    background:#ebebeb;
-    color:black;
-    padding:1rem;
-    font-size:clamp(1rem,2vw,1.2rem);
+    h3{
+        margin-left:1rem;
+        background:#ebebeb;
+        color:black;
+        padding:1rem;
+        font-size:clamp(1rem,2vw,1.2rem);
     
   }
-  img{
-    width:30px;
-    height:30px;
+    img{
+        width:30px;
+        height:30px;
   }
   
 }
-.service{
+    .service{
     margin-left:1.5rem;
     margin-top:3rem;
 }
-.img-container{
+    .img-container{
     margin-left:6rem;
     margin-top:5rem;
-  img{
+    img{
     width:30rem;
     height:30rem;
     object-fit: cover;

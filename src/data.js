@@ -410,25 +410,25 @@ export const links=[
         id:1,
         image:image,
         title:'Efficient',
-        desc:'Lorem ipsum dolor, sit amet.'
+       
     },
     {
         id:2,
         image:image1,
         title:'Teamwork',
-        desc:'Lorem ipsum dolor, sit amet.'
+      
     },
     {
         id:3,
         image:image2,
         title:'Money',
-        desc:'Lorem ipsum dolor, sit amet.'
+      
     },
     {
         id:4,
         image:image3,
         title:'Diaphragm',
-        desc:'Lorem ipsum dolor, sit amet.'
+        
     },
 
 ];

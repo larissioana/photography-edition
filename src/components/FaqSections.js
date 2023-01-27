@@ -36,11 +36,9 @@ overflow-x: hidden;
         padding:3rem 2rem;
         width:100%;
         .question{
-       
-           width:600px;
-    
-            display:flex;
-            justify-content: space-between;
+        width:600px;
+        display:flex;
+        justify-content: space-between;
             button{
                 color:#ebebeb;
                 background:none;
@@ -56,7 +54,7 @@ overflow-x: hidden;
             }
         }
         h4{
-            color:#ebebeb;
+                color:#ebebeb;
                 margin-bottom:1rem;
                 font-size:clamp(.9rem,2vw,1rem);
         }
